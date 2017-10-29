@@ -1,0 +1,37 @@
+login to ubuntu 14.04 machine
+
+mkdir monero
+cd monero
+wget https://downloads.getmonero.org/cli/linux64
+tar -xjvf monero-linux-x64-v0.11.0.0.tar.bz2
+
+run monerod or
+wget -c --progress=bar https://downloads.getmonero.org/blockchain.raw and
+./monero-blockchain-import --verify 0 --input-file ./blockchain.raw
+rm -rf ./blockchain.raw
+./monerod
+exit
+./monerod --detach
+
+once node is synced:
+/monero-wallet-cli --generate-new-wallet <name>
+./monero-wallet-rpc --wallet-file <name> --password <pass> --rpc-bind-port 8082
+
+sudo apt-get update && sudo apt-get install git redis-server libboost1.55-all-dev nodejs-dev nodejs-legacy npm cmake libssl-dev
+
+git clone https://github.com/fancoder/cryptonote-universal-pool.git pool
+cd pool
+npm update
+
+update config.json
+
+redis-server --daemonize yes
+
+node init.js
+to run forever
+npm install -g forever
+forever start init.js
+
+hookup joyous trying umpire tuition glide picked earth
+apart essential deodorant noodles elite bunch pause whole
+dizzy lectures refer jukebox huts wept bays bounced apart

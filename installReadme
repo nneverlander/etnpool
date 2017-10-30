@@ -21,6 +21,7 @@ sudo apt-get update && sudo apt-get install git redis-server libboost1.55-all-de
 
 git clone https://github.com/fancoder/cryptonote-universal-pool.git pool
 cd pool
+change "cryptonote-util": "git://github.com/Snipa22/node-cryptonote-util.git#xmr-Nan-2.0" in package.json
 npm update
 
 update config.json
@@ -31,6 +32,9 @@ node init.js
 to run forever
 npm install -g forever
 forever start init.js
+
+npm install -g coin-hive-stratum
+coin-hive-stratum 8892 --host=localhost --port=3333
 
 hookup joyous trying umpire tuition glide picked earth
 apart essential deodorant noodles elite bunch pause whole

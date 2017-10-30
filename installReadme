@@ -5,7 +5,7 @@ cd monero
 wget https://downloads.getmonero.org/cli/linux64
 tar -xjvf monero-linux-x64-v0.11.0.0.tar.bz2
 
-run monerod or
+run monerod --data-dir <datadir> or
 wget -c --progress=bar https://downloads.getmonero.org/blockchain.raw and
 ./monero-blockchain-import --verify 0 --input-file ./blockchain.raw
 rm -rf ./blockchain.raw

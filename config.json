@@ -2,6 +2,7 @@
   "coin": "monero",
   "symbol": "XMR",
   "coinUnits": 1000000000000,
+  "coinDifficultyTarget": 120,
 
   "logging": {
     "files": {
@@ -33,7 +34,7 @@
         "desc": "Mid range hardware"
       },
       {
-        "port": 7778,
+        "port": 7777,
         "difficulty": 10000,
         "desc": "High end hardware"
       },
@@ -92,17 +93,17 @@
     "enabled": true,
     "interval": 30,
     "depth": 10,
-    "poolFee": 2,
-    "devDonation": 0.5,
+    "poolFee": 1,
+    "devDonation": 0,
     "coreDevDonation": 0,
-    "extraFeaturesDevDonation":0.1
+    "extraFeaturesDevDonation":0
   },
 
   "api": {
     "enabled": true,
     "hashrateWindow": 600,
     "updateInterval": 5,
-    "port": 7777,
+    "port": 9999,
     "blocks": 30,
     "payments": 30,
     "password": "test"

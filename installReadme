@@ -14,7 +14,7 @@ exit
 ./monerod --detach
 
 once node is synced:
-/monero-wallet-cli --generate-new-wallet <name>
+./monero-wallet-cli --generate-new-wallet <name>
 ./monero-wallet-rpc --wallet-file <name> --password <pass> --rpc-bind-port 8082
 
 sudo apt-get update && sudo apt-get install git redis-server libboost1.55-all-dev nodejs-dev nodejs-legacy npm cmake libssl-dev
@@ -34,6 +34,10 @@ npm install -g forever
 forever start init.js
 
 npm install -g coin-hive-stratum
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+source ~/.bashrc
+nvm install 8.5.0
+nvm use 8.5.0
 coin-hive-stratum 8892 --host=localhost --port=3333
 
 hookup joyous trying umpire tuition glide picked earth

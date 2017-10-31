@@ -15,7 +15,7 @@ exit
 
 once node is synced:
 ./monero-wallet-cli --generate-new-wallet <name>
-./monero-wallet-rpc --wallet-file <name> --password <pass> --rpc-bind-port 8082
+nohup ./monero-wallet-rpc --wallet-file <name> --password <pass> --rpc-bind-port 8082 > /dev/null 2>&1 &
 
 sudo apt-get update && sudo apt-get install git redis-server libboost1.55-all-dev nodejs-dev nodejs-legacy npm cmake libssl-dev
 
@@ -28,6 +28,15 @@ update config.json
 
 redis-server --daemonize yes
 
+sudo add-apt-repository ppa:certbot/certbot && sudo apt-get update && sudo apt-get install python-certbot-nginx
+sudo apt-get install nginx
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+sudo service nginx reload
+sudo certbot --nginx -d sivanich.com -d sharon.sivanich.com
+sudo ufw app list
+sudo ufw allow 'Nginx HTTPS'
+sudo ufw status
+
 node init.js
 to run forever
 npm install -g forever
@@ -38,7 +47,8 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | b
 source ~/.bashrc
 nvm install 8.5.0
 nvm use 8.5.0
-coin-hive-stratum 8892 --host=localhost --port=3333
+node proxy.js
+//coin-hive-stratum 8892 --host=localhost --port=3333
 
 hookup joyous trying umpire tuition glide picked earth
 apart essential deodorant noodles elite bunch pause whole

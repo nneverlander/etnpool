@@ -32,10 +32,7 @@ sudo add-apt-repository ppa:certbot/certbot && sudo apt-get update && sudo apt-g
 sudo apt-get install nginx
 https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
 sudo service nginx reload
-sudo certbot --nginx -d sivanich.com -d sharon.sivanich.com
-sudo ufw app list
-sudo ufw allow 'Nginx HTTPS'
-sudo ufw status
+sudo certbot --nginx
 
 node init.js
 to run forever
@@ -48,7 +45,7 @@ source ~/.bashrc
 nvm install 8.5.0
 nvm use 8.5.0
 node proxy.js
-//coin-hive-stratum 8892 --host=localhost --port=3333
+//coin-hive-stratum 8887 --host=localhost --port=3333
 
 hookup joyous trying umpire tuition glide picked earth
 apart essential deodorant noodles elite bunch pause whole

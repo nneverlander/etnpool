@@ -1,0 +1,71 @@
+login to ubuntu 14.04 machine
+
+mkdir monero
+cd monero
+wget https://downloads.getmonero.org/cli/linux64
+tar -xjvf monero-linux-x64-v0.11.1.0.tar.bz2
+
+./monerod --data-dir <datadir> or
+wget -c --progress=bar https://downloads.getmonero.org/blockchain.raw and
+./monero-blockchain-import --verify 0 --input-file ./blockchain.raw
+rm -rf ./blockchain.raw
+./monerod
+exit
+./monerod --detach
+
+once node is synced:
+./monero-wallet-cli --generate-new-wallet <name>
+nohup ./monero-wallet-rpc --wallet-file /wallet/poolwallet --daemon-port 26968 --rpc-bind-port 8082 > /dev/null 2>&1 &
+
+sudo apt-get update && sudo apt-get install git redis-server libboost1.55-all-dev nodejs-dev nodejs-legacy npm cmake libssl-dev
+
+git clone https://github.com/fancoder/cryptonote-universal-pool.git pool
+cd pool
+change "cryptonote-util": "git://github.com/Snipa22/node-cryptonote-util.git#xmr-Nan-2.0" in package.json
+npm update
+
+update config.json
+
+redis-server --daemonize yes
+
+sudo add-apt-repository ppa:certbot/certbot && sudo apt-get update && sudo apt-get install python-certbot-nginx
+sudo apt-get install nginx
+https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-16-04
+sudo service nginx reload
+sudo certbot --nginx
+
+node init.js
+to run forever
+npm install -g forever
+forever start init.js
+
+npm install coin-hive-stratum
+change node_modules/config/defaults.js for donations
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.6/install.sh | bash
+source ~/.bashrc
+nvm install 8.5.0
+nvm use 8.5.0
+forever start proxy.js
+
+apt-get install logrotate
+logrotate <config_file>
+
+check ulimit -n an set it high
+
+hookup joyous trying umpire tuition glide picked earth
+apart essential deodorant noodles elite bunch pause whole
+dizzy lectures refer jukebox huts wept bays bounced apart
+
+electroneumd --log-level=0 --p2p-bind-ip=0.0.0.0 --p2p-bind-port=26967 --rpc-bind-ip=127.0.0.1 --rpc-bind-port=26968
+docker run -it -v /electroneum/chain:/root/.electroneum -v /electroneum/wallet:/wallet -p 26967:26967 -p 26968:26968 -p 8082:8082 -p 3333:3333 -p 5555:5555 -p 7777:7777 -p 9998:9998 -p 8887:8887 --name bchn etnimage
+docker exec -it bchn bash
+cd /pool
+nvm use 0.10.48
+redis-server --daemonize yes
+forever start init.js
+nvm use 8.5.0
+forever start proxy.js
+/usr/local/bin/electroneum-wallet-rpc --wallet-file /wallet/poolwallet --daemon-port 26968 --rpc-bind-port 808ll
+
+logrotate logrotate.config
+cat /var/lib/logrotate/status
